@@ -32,3 +32,15 @@ langserve
 sse_starlette
 streamlit
 pysqlite3-binary
+streamlit
+langchain
+langchain-community
+langchain-core
+langchain-chroma
+langchain-huggingface
+langchain-groq
+langchain-text-splitters
+sentence-transformers
+chromadb
+pypdf
+python-dotenv
