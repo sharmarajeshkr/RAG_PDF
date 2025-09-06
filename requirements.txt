@@ -31,4 +31,5 @@ fastapi
 langserve
 sse_starlette
 streamlit
-sqlite3 >= 3.35.0
+pysqlite3-binary
+
