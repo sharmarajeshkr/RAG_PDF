@@ -1,3 +1,13 @@
+# --- Patch sqlite for Chroma (required on Streamlit Cloud) ---
+try:
+    import sys
+    import pysqlite3
+    sys.modules["sqlite3"] = pysqlite3
+except ImportError:
+    pass
+
+
+
 ## RAG Q&A Conversation With PDF Including Chat History
 import streamlit as st
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
@@ -123,4 +133,5 @@ if api_key:
             st.write("Assistant:", response['answer'])
             #st.write("Chat History:", session_history.messages)
 else:
+
     st.warning("Please enter the GRoq API Key")
