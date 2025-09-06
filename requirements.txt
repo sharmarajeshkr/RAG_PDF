@@ -31,3 +31,4 @@ fastapi
 langserve
 sse_starlette
 streamlit
+pysqlite3-binary
