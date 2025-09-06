@@ -24,7 +24,7 @@ from langchain_community.document_loaders import PyPDFLoader
 import os
 
 from dotenv import load_dotenv
-hf_token = "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"
+hf_token = st.secrets["HF_TOKEN"]
 if hf_token:
     os.environ["HF_TOKEN"] = hf_token
 else:
@@ -135,3 +135,4 @@ if api_key:
 else:
 
     st.warning("Please enter the GRoq API Key")
+
