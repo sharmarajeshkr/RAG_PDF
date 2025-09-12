@@ -36,10 +36,11 @@ st.title("Conversational RAG With PDF uplaods and chat history")
 st.write("Upload Pdf's and chat with their content")
 
 ## Input the Groq API Key
-api_key=st.text_input("Enter your Groq API key:",type="password")
+api_key=st.secrets["GROQ_API_KEY"]
+#api_key=st.text_input("Enter your Groq API key:",type="password")
 
 ## Check if groq api key is provided
-if api_key:
+#if api_key:
     llm=ChatGroq(groq_api_key=api_key,model_name="Gemma2-9b-It")
     ## chat interface
     #session_id=st.text_input("Session ID",value="default_session")
@@ -131,8 +132,9 @@ if api_key:
             #st.write(st.session_state.store)
             st.write("Assistant:", response['answer'])
             #st.write("Chat History:", session_history.messages)
-else:
+#else:
 
-    st.warning("Please enter the GRoq API Key")
+   # st.warning("Please enter the GRoq API Key")
+
 
 
