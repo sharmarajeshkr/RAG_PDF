@@ -44,3 +44,6 @@ sentence-transformers
 chromadb
 pypdf
 python-dotenv
+langchain-pinecone
+pinecone-client
+
