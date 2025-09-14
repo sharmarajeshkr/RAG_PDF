@@ -78,8 +78,8 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 # ------------------ Constants ------------------
 DOC_URL = "https://spring.io/page-data/guides/page-data.json"
 API_KEY = "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"
-HF_TOKEN = "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"
-PINECONE_API_KEY = "pcsk_7HbFDU_KnB38ny9zWM8MFpJxu8bk6szDnjAaYhWwFBEpRV4TkD5hwe3wKjrJSjtxS6QcV6"
+HF_TOKEN = st.secrets["HF_TOKEN"]
+PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
 INDEX_NAME = "spring-guides"
 
 
@@ -201,5 +201,6 @@ if user_input:
     #st.write("Assistant:", response['answer'])
     st.subheader("Assistant Response:")
     st.markdown(answer) 
+
 
 
