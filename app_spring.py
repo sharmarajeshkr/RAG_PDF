@@ -45,7 +45,7 @@ def fetch_spring_guides_json(url: str) -> list:
     guide_urls = []
     for node in nodes:
         url_path = 'https://spring.io' + node.get('path', '')
-        write_file(url_path, 'href.txt')
+        #write_file(url_path, 'href.txt')
         guide_urls.append(url_path)
         logger.info(f"Found guide URL: {url_path}")
     return guide_urls
@@ -94,8 +94,8 @@ if INDEX_NAME not in [i["name"] for i in pc.list_indexes()]:
         dimension=384,  # all-MiniLM-L6-v2 embeddings
         metric="cosine",
         spec=ServerlessSpec(
-            cloud="aws",       # options: "aws" or "gcp"
-            region="us-east-1" # choose region available in your Pinecone account
+            cloud="aws",
+            region="us-east-1"
         ),
     )
     print(f"Created Pinecone index: {INDEX_NAME}")
@@ -202,3 +202,4 @@ if user_input:
     #st.write("Assistant:", response['answer'])
     st.subheader("Assistant Response:")
     st.markdown(answer) 
+
